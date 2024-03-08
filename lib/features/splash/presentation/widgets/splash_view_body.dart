@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mr_code/constants.dart';
+import 'package:mr_code/core/app_router/app_router.dart';
 import 'package:mr_code/features/splash/presentation/widgets/sliding_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -18,6 +20,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     initSlidingAnimation();
+    navigatToHome();
   }
 
   @override
@@ -31,7 +34,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
           end: Alignment.bottomRight,
           colors: [
             kDarkBlue,
-            kBlue,
+            kDarkBlue,
           ],
         ),
       ),
@@ -48,6 +51,12 @@ class _SplashViewBodyState extends State<SplashViewBody>
         ),
       ),
     );
+  }
+
+  void navigatToHome() {
+    Future.delayed(const Duration(seconds: 2), () {
+      GoRouter.of(context).push(AppRouter.kHomeView);
+    });
   }
 
   void initSlidingAnimation() {
