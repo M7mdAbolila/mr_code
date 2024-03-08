@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_code/core/widgets/custom_app_bar.dart';
 import 'package:mr_code/features/home/presentation/views/widgets/category_list_view.dart';
+import 'package:mr_code/features/home/presentation/views/widgets/category_section.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -10,22 +12,15 @@ class HomeViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: ListView(
-        children: const [
-          CustomAppBar(),
+        children: [
           SizedBox(
-            height: 30,
+            height: MediaQuery.of(context).size.height * .01,
           ),
-          Text(
-            'Categories',
-            style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: 20,
-            ),
-          ),
+          const CustomAppBar(),
           SizedBox(
-            height: 16,
+            height: MediaQuery.of(context).size.height * .04,
           ),
-          CategoryListview(),
+          const CategoriesSection(),
         ],
       ),
     );

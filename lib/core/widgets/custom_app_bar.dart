@@ -10,14 +10,14 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        const SizedBox(
+          width: 30,
+        ),
+        const AppNameWidget(),
         GestureDetector(
           child: const Icon(
             Icons.library_books,
           ),
-        ),
-        const AppNameWidget(),
-        const SizedBox(
-          width: 30,
         ),
       ],
     );
