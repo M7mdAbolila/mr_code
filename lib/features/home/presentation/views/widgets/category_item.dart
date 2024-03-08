@@ -6,28 +6,31 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 80,
-          height: 80,
-          decoration: const BoxDecoration(
-            color: kDarkBlue,
-            shape: BoxShape.circle,
+    return Padding(
+      padding: const EdgeInsets.only(right: 10),
+      child: Column(
+        children: [
+          Container(
+            width: 80,
+            height: 80,
+            decoration: const BoxDecoration(
+              color: kDarkBlue,
+              shape: BoxShape.circle,
+            ),
+            padding: const EdgeInsets.all(10),
+            child: Image.asset('assets/images/Icon.png'),
           ),
-          padding: const EdgeInsets.all(10),
-          child: Image.asset('assets/images/Icon.png'),
-        ),
-        const SizedBox(
-          height: 5,
-        ),
-        const Text(
-          'Flutter',
-          style: TextStyle(
-            fontSize: 15,
+          const SizedBox(
+            height: 5,
           ),
-        ),
-      ],
+          const Text(
+            'Flutter',
+            style: TextStyle(
+              fontSize: 15,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
