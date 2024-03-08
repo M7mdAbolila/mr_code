@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mr_code/features/splash/presentation/views/splash_view.dart';
+import 'package:mr_code/core/app_router/app_router.dart';
 
 void main() {
   runApp(const MrCode());
@@ -10,9 +10,9 @@ class MrCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       theme: ThemeData.dark(),
-      home: const SplashView(),
     );
   }
 }
