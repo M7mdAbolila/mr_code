@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mr_code/core/widgets/custom_app_bar.dart';
+import 'package:mr_code/features/home/presentation/views/widgets/category_item.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -7,10 +8,24 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: ListView(
         children: const [
           CustomAppBar(),
+          SizedBox(
+            height: 30,
+          ),
+          Text(
+            'Categories',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 20,
+            ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          CategoryItem(),
         ],
       ),
     );
