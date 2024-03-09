@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_code/core/widgets/custom_app_bar.dart';
-import 'package:mr_code/features/home/presentation/views/widgets/category_list_view.dart';
+import 'package:mr_code/features/home/presentation/views/widgets/book_item.dart';
 import 'package:mr_code/features/home/presentation/views/widgets/category_section.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -21,6 +21,20 @@ class HomeViewBody extends StatelessWidget {
             height: MediaQuery.of(context).size.height * .04,
           ),
           const CategoriesSection(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .04,
+          ),
+          const Text(
+            'Computer Science',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 20,
+            ),
+          ),
+          const SizedBox(
+            height: 150,
+          ),
+          const BookItem(),
         ],
       ),
     );
